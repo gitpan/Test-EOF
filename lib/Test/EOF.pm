@@ -3,8 +3,8 @@ package Test::EOF;
 use strict;
 use warnings;
 
-use 5.010010;
-our $VERSION = '0.04';
+use 5.010;
+our $VERSION = '0.05';
 
 use Cwd qw/cwd/;
 use File::Find;
@@ -76,16 +76,24 @@ sub _check_perl_file {
     }
 
     if($linecount < $options->{'minimum_newlines'}) {
-        $test->ok(0, "Not enough empty lines (had $linecount, wanted $options->{'minimum_newlines'}) at the end of $file");
+        my $wanted = make_wanted($options);
+        $test->ok(0, "Not enough line breaks (had $linecount, wanted $wanted) at the end of $file");
         return 0;
     }
     elsif($linecount > $options->{'maximum_newlines'}) {
-        $test->ok(0, "Too many empty lines (had $linecount, wanted $options->{'maximum_newlines'}) at the end of $file ");
+        my $wanted = make_wanted($options);
+        $test->ok(0, "Too many line breaks (had $linecount, wanted $wanted) at the end of $file ");
         return 0;
     }
-    $test->ok(1, "Just the right number of empty lines at the end of $file");
+    $test->ok(1, "Just the right number of line breaks at the end of $file");
     return 1;
 
+}
+
+sub make_wanted {
+    my $options = shift;
+    return $options->{'minimum_newlines'} if $options->{'minimum_newlines'} == $options->{'maximum_newlines'};
+    return sprintf "%d to %d" => $options->{'minimum_newlines'}, $options->{'maximum_newlines'};
 }
 
 sub _all_perl_files {
@@ -205,7 +213,7 @@ Sets the number of consecutive newlines that files checked at least should end w
 
 B<C<maximum_newlines =E<gt> $maximum>>
 
-Default: C<miminum_newlines>
+Default: C<mininum_newlines>
 
 Sets the number of consecutive newlines that files checked at most should end with.
 

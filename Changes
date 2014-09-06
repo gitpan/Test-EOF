@@ -1,5 +1,8 @@
 Revision history for Test-EOF
 
+0.05  2014-09-06 15:17:49 CEST
+	- Important typo
+
 0.04  2014-09-06 08:21:56 CEST
 	- maximum_newlines can't be less than minimum_newlines
 	- Added strict option

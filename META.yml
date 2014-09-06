@@ -32,4 +32,4 @@ resources:
   bugtracker: https://github.com/Csson/p5-test-eof/issues
   homepage: https://github.com/Csson/p5-test-eof
   repository: https://github.com/Csson/p5-test-eof.git
-version: '0.04'
+version: '0.05'
