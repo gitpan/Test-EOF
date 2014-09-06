@@ -1,0 +1,35 @@
+---
+abstract: 'Check correct end of files in your project.'
+author:
+  - 'Erik Carlsson <info@code301.com>'
+build_requires:
+  Test::More: '0.96'
+configure_requires:
+  Module::Build::Tiny: '0.037'
+dynamic_config: 0
+generated_by: 'Dist::Milla version v1.0.5, Dist::Zilla version 5.020, CPAN::Meta::Converter version 2.140640'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: '1.4'
+name: Test-EOF
+no_index:
+  directory:
+    - t
+    - xt
+    - inc
+    - share
+    - eg
+    - examples
+requires:
+  Cwd: '0'
+  File::Find: '0'
+  File::ReadBackwards: '0'
+  File::Spec: '0'
+  Test::Builder: '0'
+  perl: '5.010010'
+resources:
+  bugtracker: https://github.com/Csson/p5-test-eof/issues
+  homepage: https://github.com/Csson/p5-test-eof
+  repository: https://github.com/Csson/p5-test-eof.git
+version: '0.04'

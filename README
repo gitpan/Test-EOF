@@ -1,0 +1,75 @@
+NAME
+    Test::EOF - Check correct end of files in your project.
+
+SYNOPSIS
+      use Test::EOF;
+
+      all_perl_files_ok('lib/Test::EOF', { minimum_newlines => 2 });
+
+      done_testing();
+
+DESCRIPTION
+    Deprecated. Renamed Test::EOF. This distribution will soon be removed.
+
+    This module is used to check the end of files of Perl modules and
+    scripts. It is a way to make sure that files and with (at least) one
+    line break.
+
+    It assumes that only "\n" are used as line breaks. You might want to
+    check if your files contains any faulty line breaks, use Test::EOL for
+    that first.
+
+    There is only one function:
+
+  all_perl_files_ok
+        all_perl_files_ok(@directories, { minimum_newlines => 1, maximum_newlines => 2 });
+
+        all_perl_files_ok(@directories, { strict => 1 });
+
+    Checks all Perl files (basically "*.pm" and "*.pl") in @directories and
+    sub-directories. If @directories is empty the default is the parent of
+    the current directory.
+
+    "minimum_newlines => $minimum"
+
+    Default: 1
+
+    Sets the number of consecutive newlines that files checked at least
+    should end with.
+
+    "maximum_newlines => $maximum"
+
+    Default: "miminum_newlines"
+
+    Sets the number of consecutive newlines that files checked at most
+    should end with.
+
+    If "maximum_newlines" is less than "minimum_newlines" it gets set to
+    "minimum_newlines".
+
+    "strict"
+
+    If "strict" is given a true value, both "minimum_newlines" and
+    "maximum_newlines" will be set to 1. This option has precedence over the
+    other two.
+
+ACKNOWLEDGEMENTS
+    Test::EOL was used as an inspiration.
+
+SEE ALSO
+    *   Test::EOL
+
+    *   Test::NoTabs
+
+    *   Test::More
+
+AUTHOR
+    Erik Carlsson <info@code301.com>
+
+COPYRIGHT
+    Copyright 2014- Erik Carlsson
+
+LICENSE
+    This library is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
+

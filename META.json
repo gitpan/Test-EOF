@@ -1,0 +1,67 @@
+{
+   "abstract" : "Check correct end of files in your project.",
+   "author" : [
+      "Erik Carlsson <info@code301.com>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Dist::Milla version v1.0.5, Dist::Zilla version 5.020, CPAN::Meta::Converter version 2.140640",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Test-EOF",
+   "no_index" : {
+      "directory" : [
+         "t",
+         "xt",
+         "inc",
+         "share",
+         "eg",
+         "examples"
+      ]
+   },
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "Module::Build::Tiny" : "0.037"
+         }
+      },
+      "develop" : {
+         "requires" : {
+            "Test::Pod" : "1.41"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Cwd" : "0",
+            "File::Find" : "0",
+            "File::ReadBackwards" : "0",
+            "File::Spec" : "0",
+            "Test::Builder" : "0",
+            "perl" : "5.010010"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Test::More" : "0.96"
+         }
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/Csson/p5-test-eof/issues"
+      },
+      "homepage" : "https://github.com/Csson/p5-test-eof",
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/Csson/p5-test-eof.git",
+         "web" : "https://github.com/Csson/p5-test-eof"
+      }
+   },
+   "version" : "0.04"
+}
+
