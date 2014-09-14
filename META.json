@@ -1,7 +1,7 @@
 {
    "abstract" : "Check correct end of files in your project.",
    "author" : [
-      "Erik Carlsson <info@code301.com>"
+      "Erik Carlsson <csson@cpan.org>"
    ],
    "dynamic_config" : 0,
    "generated_by" : "Dist::Milla version v1.0.5, Dist::Zilla version 5.020, CPAN::Meta::Converter version 2.140640",
@@ -41,7 +41,7 @@
             "File::ReadBackwards" : "0",
             "File::Spec" : "0",
             "Test::Builder" : "0",
-            "perl" : "5.010010"
+            "perl" : "v5.12.0"
          }
       },
       "test" : {
@@ -62,6 +62,9 @@
          "web" : "https://github.com/Csson/p5-test-eof"
       }
    },
-   "version" : "0.05"
+   "version" : "0.060",
+   "x_contributors" : [
+      "Erik Carlsson <info@code301.com>"
+   ]
 }
 

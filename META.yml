@@ -1,7 +1,7 @@
 ---
 abstract: 'Check correct end of files in your project.'
 author:
-  - 'Erik Carlsson <info@code301.com>'
+  - 'Erik Carlsson <csson@cpan.org>'
 build_requires:
   Test::More: '0.96'
 configure_requires:
@@ -27,9 +27,11 @@ requires:
   File::ReadBackwards: '0'
   File::Spec: '0'
   Test::Builder: '0'
-  perl: '5.010010'
+  perl: v5.12.0
 resources:
   bugtracker: https://github.com/Csson/p5-test-eof/issues
   homepage: https://github.com/Csson/p5-test-eof
   repository: https://github.com/Csson/p5-test-eof.git
-version: '0.05'
+version: '0.060'
+x_contributors:
+  - 'Erik Carlsson <info@code301.com>'

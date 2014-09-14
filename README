@@ -9,8 +9,6 @@ SYNOPSIS
       done_testing();
 
 DESCRIPTION
-    Deprecated. Renamed Test::EOF. This distribution will soon be removed.
-
     This module is used to check the end of files of Perl modules and
     scripts. It is a way to make sure that files and with (at least) one
     line break.

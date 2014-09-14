@@ -1,17 +1,22 @@
 Revision history for Test-EOF
 
-0.05  2014-09-06 15:17:49 CEST
-	- Important typo
+0.060 2014-09-14T20:42:27Z CEST
+ - Added Travis status
+ - Removed faulty deprecation notice
 
-0.04  2014-09-06 08:21:56 CEST
-	- maximum_newlines can't be less than minimum_newlines
-	- Added strict option
+0.050 2014-09-06T15:17:49Z CEST
+ - Important typo
 
-0.03  2014-09-06 07:40:03 CEST
-    - Renamed and deprecated
+0.04 2014-09-06T08:21:56Z CEST
+ - maximum_newlines can't be less than minimum_newlines
+ - Added strict option
 
-0.02  2014-09-05 15:08:31 CEST
-    - Add dependencies
+0.03 2014-09-06T07:40:03Z CEST
+ - Renamed and deprecated
 
-0.01  2014-09-05 15:02:32 CEST
-    - Initial release
+0.02 2014-09-05T15:08:31Z CEST
+ - Add dependencies
+
+0.01 2014-09-05T15:02:32Z CEST
+ - Initial release
+

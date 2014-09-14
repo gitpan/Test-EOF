@@ -9,5 +9,6 @@ README
 cpanfile
 dist.ini
 lib/Test/EOF.pm
+t/author-test-eol.t
 t/basic.t
 t/release-pod-syntax.t

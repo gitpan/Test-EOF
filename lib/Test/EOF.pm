@@ -1,10 +1,9 @@
 package Test::EOF;
-
+$Test::EOF::VERSION = '0.060';
 use strict;
 use warnings;
 
 use 5.010;
-our $VERSION = '0.05';
 
 use Cwd qw/cwd/;
 use File::Find;
@@ -112,7 +111,7 @@ sub _all_perl_files {
         wanted => $wants,
         no_chdir => 1,
     };
-    
+
     find($find_arg, @base_dirs);
 
     my @perls = grep { _is_perl($_) || _is_perl($_) } @found;
@@ -123,7 +122,7 @@ sub _all_perl_files {
 
 sub _is_perl {
     my $file = shift;
-    
+
     # module
     return 1 if $file =~ m{\.pm$}i;
     return 1 if $file =~ m{::};
@@ -179,6 +178,8 @@ __END__
 
 Test::EOF - Check correct end of files in your project.
 
+=for html <p><a style="float: left;" href="https://travis-ci.org/Csson/p5-test-eof"><img src="https://travis-ci.org/Csson/p5-test-eof.svg?branch=master">&nbsp;</a>
+
 =head1 SYNOPSIS
 
   use Test::EOF;
@@ -188,8 +189,6 @@ Test::EOF - Check correct end of files in your project.
   done_testing();
 
 =head1 DESCRIPTION
-
-Deprecated. Renamed L<Test::EOF>. This distribution will soon be removed.
 
 This module is used to check the end of files of Perl modules and scripts. It is a way to make sure that files and with (at least) one line break.
 
