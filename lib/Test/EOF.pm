@@ -1,5 +1,5 @@
 package Test::EOF;
-$Test::EOF::VERSION = '0.060';
+$Test::EOF::VERSION = '0.061';
 use strict;
 use warnings;
 

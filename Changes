@@ -1,5 +1,9 @@
 Revision history for Test-EOF
 
+0.061 2014-09-18T21:26:55Z CEST
+ [Meta]
+ - Fix missing build prereqs.
+
 0.060 2014-09-14T20:42:27Z CEST
  - Added Travis status
  - Removed faulty deprecation notice
